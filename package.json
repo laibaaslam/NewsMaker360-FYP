@@ -1,0 +1,34 @@
+{
+  "name": "newsmaker360",
+  "version": "1.0.0",
+  "description": "Final Year Project",
+  "main": "n",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd Backend && npm start",
+    "client": "cd Frontend && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "keywords": [
+    "Urdu",
+    "News",
+    "Contextual",
+    "Analysis",
+    "Speech",
+    "To",
+    "Text",
+    "Summarized",
+    "News"
+  ],
+  "author": "NewsMakerTeam",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "query-string": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}

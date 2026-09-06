@@ -1,0 +1,204 @@
+.nm-header {
+  --nm-navy: #001e35;
+  --nm-blue: #004170;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem 0.85rem;
+  background: #e0f6ff;
+}
+
+.nm-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nm-logo img {
+  width: 300px;
+  max-width: 42vw;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nm-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+  z-index: 50;
+}
+
+.nm-link {
+  color: #004170 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  padding: 0.45rem 1rem !important;
+  padding-right: 1rem !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nm-link:hover {
+  color: #001e35 !important;
+}
+
+.nm-link.active {
+  color: #8b1e1e !important;
+}
+
+/* Redesigned buttons only */
+.nm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.nm-btn:active {
+  transform: scale(0.98);
+}
+
+.nm-btn--primary {
+  margin-left: 0.35rem;
+  padding: 0.7rem 1.45rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #05304d 0%, #001e35 100%);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0, 30, 53, 0.25);
+}
+
+.nm-btn--primary:hover {
+  background: linear-gradient(180deg, #0a4a70 0%, #004170 100%);
+  box-shadow: 0 12px 26px rgba(0, 65, 112, 0.3);
+}
+
+.nm-btn--ghost {
+  margin-left: 0.2rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  background: transparent;
+  color: #001e35;
+  border: 1.5px solid rgba(0, 30, 53, 0.35);
+}
+
+.nm-btn--ghost:hover {
+  background: rgba(0, 30, 53, 0.05);
+  border-color: #001e35;
+}
+
+.nm-btn--profile {
+  margin-left: 0.55rem;
+  padding: 0.35rem 0.9rem 0.35rem 0.35rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #001e35;
+  border: 1.5px solid rgba(0, 30, 53, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 30, 53, 0.06);
+}
+
+.nm-btn--profile:hover {
+  border-color: #004170;
+  box-shadow: 0 8px 18px rgba(0, 30, 53, 0.1);
+}
+
+.nm-avatar {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #004170, #001e35);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.nm-profile {
+  position: relative;
+}
+
+.nm-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.55rem);
+  min-width: 220px;
+  padding: 0.75rem;
+  background: #fff;
+  border: 1px solid rgba(0, 30, 53, 0.12);
+  border-radius: 0.85rem;
+  box-shadow: 0 16px 36px rgba(0, 30, 53, 0.14);
+  z-index: 100;
+}
+
+.nm-dropdown-email {
+  padding: 0.4rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5b6f82;
+  word-break: break-all;
+}
+
+.nm-dropdown-divider {
+  border: none;
+  height: 1px;
+  margin: 0.4rem 0;
+  background: rgba(0, 30, 53, 0.1);
+}
+
+.nm-dropdown-link {
+  display: block;
+  padding: 0.65rem 0.7rem;
+  border-radius: 0.55rem;
+  color: #001e35;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nm-dropdown-link:hover {
+  background: #e8f1f8;
+}
+
+.nm-dropdown-link--danger:hover {
+  background: #fdecea;
+  color: #b42318;
+}
+
+@media (max-width: 760px) {
+  .nm-header {
+    flex-wrap: wrap;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .nm-logo img {
+    width: 180px;
+  }
+
+  .nm-nav {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.35rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nm-link {
+    font-size: 13px !important;
+    padding: 0.35rem 0.55rem !important;
+  }
+}

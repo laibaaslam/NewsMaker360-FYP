@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Environment and secrets
+.env
+**/.env
+.env.*
+!.env.example
+!Backend/.env.example
+Backend/.env
+
+# Build output
+Frontend/build/
+Frontend/coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+Backend/.venv/
+
+# Downloaded media / temp
+Backend/Downloads/
+*.mp3
+*.m4a
+*.webm
+*.wav
+
+# Logs and OS
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100;200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav a {
+  color: #004170;
+  font-weight: 500;
+  font-size: 17px;
+  padding-right: 45px;
+}
+
+nav a.active {
+  color: #001e35;
+}
+
+#AUH {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Adjust the values based on your preference */
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Channel logo marquee */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 40px 0;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to right, #E0F6FF, transparent);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to left, #E0F6FF, transparent);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: slide 35s linear infinite;
+}
+
+.logos-slide img {
+  height: 110px;
+  width: auto;
+  margin: 0 18px;
+  padding: 8px 12px;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.55);
+  transition: transform 0.2s ease;
+}
+
+.logos-slide a:hover img {
+  transform: scale(1.06);
+}
+
+/* For Chart */
+.chart-container {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.chart-container.ripple {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* /for Accordion/ */
+.custom-accordion {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+
+.custom-accordion .ant-collapse-header {
+  font-size: 18px;
+  /* Increase font size for headers */
+  /* padding: 20px; Increase padding for headers */
+}
+
+.custom-accordion .ant-collapse-content {
+  font-size: 16px;
+  /* Increase font size for content */
+  /* padding: 20px; Increase padding for content */
+}

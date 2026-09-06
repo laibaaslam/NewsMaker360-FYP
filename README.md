@@ -8,7 +8,7 @@ This repository is the **Final Year Project** of:
 - Laiba Aslam
 - Suniya Ehsan
 
-Supervised by **Dr. Naeem Ahmed**.
+Supervised by **Uzair Naqvi**.
 
 ---
 
@@ -62,7 +62,6 @@ YouTube URL
 │   ├── linkdownloader.py
 │   ├── corefres.py
 │   └── requirements.txt
-├── defense-pptx/      Defense slides
 └── package.json       Root scripts to run client + server together
 ```
 
